@@ -91,7 +91,7 @@ impl Client {
         Ok(crate::aio::MultiplexedConnection::new(con))
     }
 
-    #[cfg(feature = "tokio-rt-core")]
+    #[cfg(feature = "connection-manager")]
     pub async fn get_tokio_connection_manager(
         &self,
     ) -> RedisResult<crate::aio::ConnectionManager> {
